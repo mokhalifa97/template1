@@ -1,0 +1,319 @@
+
+/* ? ********************* global style  ************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+body {
+    height: 2000px;
+}
+
+:root{ 
+    --main-color: #333333;
+    --secondary-color: #8b8b8b;
+    --third-color: #bd1550;
+    --about-color: #232323;
+    --footer-color: #191919;
+    --border-color: #e2e2e2;
+    font-family: 'Poppins', sans-serif;
+}
+
+.float>* {
+    float: left;
+}
+
+.float::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section {
+    margin: 40px 0;
+}
+.container {
+    width: 75%;
+    margin: auto;
+}
+
+h2 {
+    font-family: 'Cairo', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+
+h2::after,
+h2::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 5px;
+    border-top: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    width: 42%;
+}
+h2::after {
+    right: 0;
+    left: initial;
+}
+
+/* ? ********************* header style  ************************/
+header {
+    min-height: 70vh; 
+    background: url(../images/bg_head.jpg) center center no-repeat;
+    padding: 3% 0;
+}
+.header_container {
+    width: 35%;
+    text-align: center;
+    margin: auto;
+}
+.header_container img{
+    width: 200px;
+    border-radius: 50%;
+    border: 10px var(--border-color) solid;
+}
+
+/* ? ********************* nav style  ************************/
+nav{
+    height: 60px;
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+    font-size: .9rem;
+    font-weight: 400;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+}
+
+nav ul{
+    margin: auto;
+    width: 35%;
+    padding-top: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    margin-right: 50px;
+    padding-left: 4%;
+}
+
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+nav .dropdawon{
+    position: relative;
+}
+nav .dropdawon>.test{
+    position: absolute;
+    display: none;
+}
+nav .dropdawon:hover>.test {
+    display: block;
+}
+.fa-caret-down{
+    font-size: 15px;
+    padding-left: 5px;
+}
+ul .test li{
+    width: 80px;
+    height: 30px;
+    background-color:var(--border-color);
+    border: 1px #191919 solid;
+    color:var(--third-color);
+    font-size: .9rem;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+/* ? ********************* description style  ************************/
+
+
+.description> .container{
+    text-align: center;
+    font-weight: 300;
+    font-size: .9rem;
+    color: var(--secondary-color);
+    line-height: 1.80;
+}
+.container>span{
+    color: var(--third-color);
+}
+
+/* ? ********************* service style  ************************/
+
+.service .services{
+    width: 25%;
+}
+.service .services h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+}
+.services p {
+    text-align: left;
+    line-height: 1.5;
+    font-family: 'Cairo', sans-serif;
+    font-size: .8rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    width: 90%;
+}
+
+.services input{
+    height: 40px;
+    width: 140px;
+    text-transform: uppercase;
+    background-color: white;
+    margin-inline-start: 20%;
+}
+.services input:hover{
+    background-color: var(--third-color);
+    color: white;
+    border: var(--border-color);
+}
+/* ? ********************* work style  ************************/
+.work .works {
+    width: calc(100% /3);
+    padding-bottom: 15px;
+}
+.work .works img {
+    max-width: 90%;
+}
+
+.work h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.work .works a{
+    text-decoration: none;
+    color: var(--third-color);
+    font-size: .8rem;
+}
+
+.works .links {
+    text-align: center;
+}
+
+.work .works .links a:not(:last-child)::after{ 
+    content: "|";
+    color: #191919;
+    margin-left: 3px;
+    
+}
+/* ? ********************* download style  ************************/
+.download .container{
+    background-color: #f3f3f3;
+    height: 85px;
+    text-align: center;
+    padding-top: 25px;
+    padding-left: 5px;
+    border: var(--border-color) 4px double;
+}
+.download .container .download_text{
+    font-family: 'Cairo', sans-serif;
+    padding-right: 10px;
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.3;
+    display: inline-block;
+    width: 75%;
+}
+.download_text span{
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    color: var(--third-color);
+}
+.download .container .download_button{
+    display: inline-block;
+    width: 20%;
+    
+}
+.download .container input{
+    height: 45px;
+    width: 210px;
+    background-color: var(--third-color);
+    color: white;
+    text-transform: uppercase;
+    border: none;
+}
+.download .container input:hover{
+    color: var(--footer-color);
+    background-color: white;
+    border: #191919 1px solid;
+}
+/* ? ********************* client style  ************************/
+.client .logos>img{
+    width: calc(100% /5);
+} 
+
+.logos img{
+    max-width: 160px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    padding: 30px;
+    filter: grayscale(100%);
+}
+/* ? ********************* footer style  ************************/
+footer {
+    background-color: var(--about-color);
+    width: 100%;
+    height: 320px;
+    color: white;
+}
+
+footer .footer_content{
+    width: calc(100% / 4);
+    height: 300px;
+}
+
+.footer_content h4{
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #b4afaf;
+}
+.footer_content p{
+    color: var(--secondary-color);
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+.footer_content .icons{
+    font-size: 25px;
+    color: white;
+}
+/* ? ********************* copyright style  ************************/
+.copyright{
+    width: 100%;
+    height: 100px;
+    background-color: var(--footer-color);
+}
+.container{
+    position: relative;
+    color: var(--border-color);
+    padding-top: 32px;
+    font-size: .8rem;
+    color: grey;
+
+}
+.container .left{
+    position: absolute;
+    left: 0;
+}
+.container .right{
+    position: absolute;
+    right: 0;
+    line-height: 1.5;
+}
+.copyright span{
+    color: #b4afaf;
+}
